@@ -263,4 +263,14 @@ footer span {
   .edit-pop-up {
     width: 90%;
   }
+
+  #myCarousel {
+    min-height: 300px;
+  }
+
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+    min-height: 300px;
+    max-height: 3500px;
+  }
 }
