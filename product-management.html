@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+      integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/manageProduct.js" defer></script>
+    <title>Product Management</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <nav>
+          <a href="./index.html"><span>Product management</span></a>
+          <button data-add class="button">Add Product</button>
+        </nav>
+      </header>
+      <main>
+        <h3>All Products</h3>
+        <section class="product-wrapper"></section>
+
+        <div class="pop-up">
+          <div class="form">
+            <div class="input">
+              <label for="name">Name</label>
+              <input type="text" data-name />
+            </div>
+            <div class="input">
+              <label for="name">Description</label>
+              <textarea data-description></textarea>
+            </div>
+            <div class="input">
+              <label for="name">Photo URL</label>
+              <input type="url" data-img />
+            </div>
+            <div class="input checkbox">
+              <label for="name">Featured</label>
+              <input type="checkbox" data-checkbox />
+            </div>
+            <div class="input">
+              <button data-submit class="add">Add</button>
+              <button data-close class="close">Close</button>
+            </div>
+          </div>
+        </div>
+        <div class="edit-pop-up">
+          <div class="form">
+            <div class="input">
+              <label for="name">Name</label>
+              <input type="text" data-name minlength="1" maxlength="50" />
+            </div>
+            <div class="input">
+              <label for="name">Description</label>
+              <textarea
+                data-description
+                minlength="0"
+                maxlength="200"
+              ></textarea>
+            </div>
+            <div class="input">
+              <label for="name">Photo URL</label>
+              <input type="url" data-img />
+            </div>
+            <div class="input checkbox">
+              <label for="name">Featured</label>
+              <input type="checkbox" data-checkbox />
+            </div>
+            <div class="input">
+              <a href="./product-management.html">
+                <button data-update class="add">Update Product</button></a
+              >
+              <button data-close class="close">Close</button>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <p>Made By Godfrey Necesario</p>
+      </footer>
+      <div class="overlay"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+      integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/displayProducts.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <nav>
+          <span>Product Management</span>
+          <a href="./product-management.html" class="button">Manage Products</a>
+        </nav>
+      </header>
+      <main>
+        <section>
+          <h3>Featured Products</h3>
+          <div
+            id="myCarousel"
+            class="product-slideshow carousel slide"
+            data-ride="carousel"
+            data-interval="5000"
+            data-pause="hover"
+          >
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox"></div>
+
+            <!-- Left and right controls -->
+            <a
+              class="left carousel-control"
+              href="#myCarousel"
+              role="button"
+              data-slide="prev"
+            >
+              <span
+                class="glyphicon glyphicon-chevron-left"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a
+              class="right carousel-control"
+              href="#myCarousel"
+              role="button"
+              data-slide="next"
+            >
+              <span
+                class="glyphicon glyphicon-chevron-right"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </section>
+        <section>
+          <h3>Product Catalog</h3>
+          <div class="product-sorted"></div>
+        </section>
+      </main>
+      <footer>
+        <p>Made By Godfrey Necesario</p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.overlay.active {
+  pointer-events: all;
+  opacity: 1;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #fff;
+}
+
+button.add,
+[data-add],
+[data-edit] {
+  background: #2395f1;
+}
+
+button.delete,
+[data-delete] {
+  background: #f33434;
+}
+
+button.close {
+  background: #eee;
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+section,
+header nav {
+  max-width: 1300px;
+  padding: 0 30px;
+  margin: auto;
+}
+
+section {
+  margin: 3rem auto;
+}
+
+header {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+header span {
+  font-weight: 700;
+}
+
+header .button {
+  background: #2395f1;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+header .button:hover {
+  background: #1f84d6;
+}
+
+main {
+  margin-top: 3rem;
+}
+
+main section {
+  padding: 3rem auto;
+}
+
+main h3 {
+  text-align: center !important;
+}
+
+.product-wrapper,
+.product-slideshow,
+.product-sorted {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 3rem auto;
+}
+
+.product-wrapper .product,
+.product-sorted .product {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  border-radius: 5px;
+  padding-bottom: 0.5rem;
+}
+
+.product-wrapper .product img,
+.product-slideshow .product img,
+.product-sorted .product img {
+  width: 100%;
+}
+
+.product-wrapper .product img,
+.product-sorted .product img {
+  margin-bottom: 15px;
+  min-height: 300px;
+  max-height: 300px;
+}
+
+.product.active {
+  display: none;
+}
+
+.product h4,
+.product span,
+.product p,
+.product .buttons {
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.product p {
+  margin-top: 5px;
+  color: #444444;
+}
+
+.product h4,
+.product span,
+.product p {
+  line-break: anywhere;
+}
+.product .buttons button {
+  margin-right: 5px;
+}
+
+/* Product Slideshow */
+#myCarousel {
+  display: flex;
+  min-height: 500px;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width: 100% !important;
+  min-height: 500px;
+  max-height: 500px;
+}
+
+.carousel-inner > .item {
+  width: 100%;
+}
+.pop-up,
+.edit-pop-up {
+  padding: 1rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+  transition: 250ms ease-in;
+  background: #fff;
+  z-index: 2;
+}
+
+.pop-up.active,
+.edit-pop-up.active {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  pointer-events: all;
+}
+
+.pop-up .input,
+.edit-pop-up .input {
+  margin-bottom: 15px;
+}
+
+.pop-up .input label,
+.edit-pop-up input label {
+  margin-bottom: 5px;
+}
+
+.pop-up input,
+.pop-up textarea,
+.edit-pop-up input,
+.edit-pop-up textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: solid 1px #cccaca;
+  font-family: inherit;
+}
+
+.pop-up textarea,
+.edit-pop-up textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.pop-up .checkbox,
+.edit-pop-up .checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.pop-up .checkbox label,
+.edit-pop-up .checkbox label {
+  margin-bottom: 0;
+  margin-right: 10px;
+}
+
+.pop-up .checkbox input,
+.edit-pop-up .checkbox input {
+  width: auto;
+}
+
+footer {
+  background: #000;
+  color: #fff;
+  padding: 2rem 30px;
+  text-align: center;
+}
+
+footer span {
+  font-size: 1.1rem;
+}
